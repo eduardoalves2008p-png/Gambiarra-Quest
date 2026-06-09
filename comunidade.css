@@ -1,0 +1,222 @@
+/* RESET E ESTILOS GERAIS DA INTERFACE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #071324;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO (TOPO) */
+.cabecalho {
+    background-color: #0a182c;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid #142d4c;
+}
+
+.logo-mini {
+    display: flex;
+    align-items: center;
+}
+
+.logo-mini-img {
+    height: 40px;
+    width: auto;
+}
+
+.menu-topo {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    color: #a3b8cc;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.menu-item.ativo, .menu-item:hover {
+    background-color: #162f52;
+    color: #ffffff;
+}
+
+.busca {
+    display: flex;
+    align-items: center;
+    background-color: #0d223f;
+    border: 1px solid #1c3e69;
+    border-radius: 4px;
+    padding: 6px 12px;
+    width: 250px;
+}
+
+.icone-busca {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.busca input {
+    background: none;
+    border: none;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* ESTRUTURA PRINCIPAL (CORPO DA PÁGINA) */
+.conteudo {
+    display: flex; /* Cria a divisão entre menu lateral e conteúdo principal */
+    min-height: calc(100vh - 65px);
+}
+
+/* MENU LATERAL */
+.menu-lateral {
+    width: 240px;
+    background-color: #091627;
+    border-right: 1px solid #142d4c;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.lateral-item {
+    color: #8fa3b5;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.lateral-item:hover, .lateral-item.destaque {
+    background-color: rgba(34, 70, 117, 0.3);
+    color: #3fa1ff;
+    border-left: 3px solid #3fa1ff;
+}
+
+.categorias-titulo {
+    font-size: 11px;
+    color: #4f6885;
+    padding: 24px 24px 8px 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ÁREA PRINCIPAL DA COMUNIDADE */
+.principal {
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.container-comunidade {
+    padding: 16px;
+    background-color: rgba(11, 26, 46, 0.5);
+    border: 1px solid #142d4c;
+    border-radius: 8px;
+}
+
+/* GRID EM 2 COLUNAS */
+.grid-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* CARDS DE POST */
+.card-post {
+    background-color: #0b1a2e;
+    border: 1px solid #162f52;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.card-post:hover {
+    border-color: #2b5c99;
+    transform: translateY(-2px);
+}
+
+.capa-post {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: #09192e;
+}
+
+.capa-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-post {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.titulo-post {
+    font-size: 14px;
+    color: #e2e8f0;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.autor-post {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+}
+
+.autor-post span {
+    color: #a3b8cc;
+}
+
+.interacoes-post {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* SEÇÃO DE SCREENSHOTS INFERIORES */
+.screenshots {
+    display: flex;
+    gap: 20px;
+}
+
+.screenshot-box {
+    flex: 1;
+    height: 180px;
+    background-color: #09192e;
+    border: 1px solid #142d4c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.screenshot-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,160 @@
+/* ==========================================================================
+   1. RESET E ESTILOS GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #071224;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO (CORRIGIDO)
+   ========================================================================== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b1a2e;
+    padding: 15px 30px;
+    border-bottom: 1px solid #162f52;
+    width: 100%;
+}
+
+.menu-topo {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-topo a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.menu-topo a.ativo, .menu-topo a:hover {
+    color: #66c0f4;
+}
+
+.busca input {
+    background-color: #162f52;
+    border: 1px solid #224675;
+    border-radius: 4px;
+    padding: 6px 12px;
+    color: #fff;
+    outline: none;
+}
+
+/* ==========================================================================
+   3. ESTRUTURA DO CONTEÚDO (MENU LATERAL + JOGOS)
+   ========================================================================== */
+.conteudo {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100%;
+    padding: 30px;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* MENU LATERAL ESTILIZADO */
+.menu-lateral {
+    width: 200px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-lateral a {
+    color: #94a3b8;
+    text-decoration: none; /* Remove o sublinhado azul feio */
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.menu-lateral a:hover, .menu-lateral a.destaque {
+    background-color: #162f52;
+    color: #fff;
+}
+
+.categorias-titulo {
+    font-size: 12px;
+    color: #66c0f4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 15px 0 5px 12px;
+}
+
+/* ÁREA DA DIREITA */
+.principal {
+    flex: 1 !important;
+    min-width: 0;
+}
+
+.tag-destaque {
+    background-color: #66c0f4;
+    color: #071224;
+    padding: 4px 8px;
+    font-weight: bold;
+    font-size: 11px;
+    border-radius: 3px;
+}
+
+/* ==========================================================================
+   4. A GRADE DE JOGOS (MANTIDA IGUAL À SUA IMAGEM CORRETA)
+   ========================================================================== */
+.grid-jogos {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin-top: 15px;
+}
+
+.card-jogo {
+    background-color: #0b1a2e;
+    border: 1px solid #162f52;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between;
+}
+
+.capa-jogo {
+    width: 100% !important;
+    height: 180px !important; /* Altura ideal que funcionou no seu print */
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #162f52;
+}
+
+.capa-jogo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.titulo-jogo {
+    font-size: 14px;
+    color: #e2e8f0;
+    font-weight: 600;
+    margin: 12px 0 4px 0;
+}
+
+.preco-jogo {
+    color: #66c0f4;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: auto;
+}

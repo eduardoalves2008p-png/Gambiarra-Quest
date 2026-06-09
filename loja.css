@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #020c1b, #031c3a);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.logo-mini-img {
+    height: 40px;
+    display: block;
+}
+
+.menu-topo {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-item {
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: #ccc;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.menu-item.ativo {
+    background: #1b3b6f;
+    color: #fff;
+}
+
+.busca {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.busca input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    margin-left: 5px;
+}
+
+/* LAYOUT CONTEÚDO */
+.conteudo {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* MENU LATERAL */
+.menu-lateral {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lateral-item {
+    color: #ccc;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.lateral-item:hover, .lateral-item.destaque {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.sublinhado {
+    text-decoration: underline;
+}
+
+.categorias-titulo {
+    margin: 15px 0 5px 0;
+    font-size: 16px;
+    color: #4da6ff;
+}
+
+/* ÁREA PRINCIPAL */
+.principal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* DESTAQUE PRINCIPAL */
+.destaque-principal {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tag-destaque {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #1b3b6f;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.placeholder-imagem {
+    width: 100%;
+    height: 350px; /* Altura ajustável do banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SCREENSHOTS */
+.screenshots {
+    display: flex;
+    gap: 20px;
+}
+
+.screenshot {
+    flex: 1;
+    height: 200px; /* Altura ajustável dos retângulos menores */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONFIGURAÇÃO GLOBAL DAS IMAGENS INSERIDAS */
+.imagem-jogo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o retângulo sem distorcer */
+    display: block;
+}
