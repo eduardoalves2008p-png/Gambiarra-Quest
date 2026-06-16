@@ -6,7 +6,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+.logo-mini {
+    display: flex;
+    align-items: center;
+}
 
+.logo-mini-img {
+    height: 40px;
+    width: auto;
+}
 body {
     background-color: #071224;
     font-family: Arial, sans-serif;
