@@ -6,16 +6,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-.logo {
+.logo-mini {
     display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
+    align-items: center;
 }
 
-.logo-img {
-    width: 280px;
-    height: auto;
-    border-radius: 50%;
+.logo-mini-img {
+    height: 40px;
+    width: auto;
 }
 
 
