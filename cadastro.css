@@ -29,8 +29,7 @@ body {
 .logo-img {
     width: 280px;
     height: auto;
-    border-radius: 50%;
-}
+    border-radius: 50%;}
 
 .formulario {
     display: flex;
