@@ -4,6 +4,14 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+.logo-mini {
+    display: flex;
+    align-items: center;
+}
+
+.logo-mini-img {
+    height: 40px;
+    width: auto;
 
 body {
     background: linear-gradient(135deg, #020c1b, #031c3a);
