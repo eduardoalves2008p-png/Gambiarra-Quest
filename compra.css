@@ -1,0 +1,405 @@
+/* ==========================================================================
+   1. RESET E GERAL
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    background-color: #071224;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    min-height: 100vh;
+}
+ 
+/* ==========================================================================
+   2. CABEÇALHO (igual ao resto do site)
+   ========================================================================== */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b1a2e;
+    padding: 15px 30px;
+    border-bottom: 1px solid #162f52;
+    width: 100%;
+}
+ 
+.logo-mini-img {
+    height: 40px;
+    display: block;
+}
+ 
+.menu-topo {
+    display: flex;
+    gap: 20px;
+}
+ 
+.menu-topo a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+ 
+.menu-topo a:hover {
+    color: #66c0f4;
+}
+ 
+.busca input {
+    background-color: #162f52;
+    border: 1px solid #224675;
+    border-radius: 4px;
+    padding: 6px 12px;
+    color: #fff;
+    outline: none;
+}
+ 
+/* ==========================================================================
+   3. TELA DE SUCESSO
+   ========================================================================== */
+.tela-sucesso {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+    padding: 40px 24px;
+}
+ 
+.sucesso-icone {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+ 
+.sucesso-titulo {
+    font-size: 26px;
+    color: #66c0f4;
+    margin-bottom: 10px;
+}
+ 
+.sucesso-msg {
+    color: #94a3b8;
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+ 
+.btn-voltar {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #0b1a2e;
+    border: 1px solid #66c0f4;
+    border-radius: 6px;
+    color: #66c0f4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+ 
+.btn-voltar:hover {
+    background-color: #162f52;
+}
+ 
+/* ==========================================================================
+   4. CONTAINER E BREADCRUMB
+   ========================================================================== */
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+ 
+.breadcrumb {
+    font-size: 13px;
+    color: #4a5568;
+    margin-bottom: 24px;
+}
+ 
+.breadcrumb a {
+    color: #66c0f4;
+    text-decoration: none;
+}
+ 
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+ 
+.breadcrumb span {
+    margin: 0 6px;
+}
+ 
+.titulo-pagina {
+    font-size: 22px;
+    color: #e2e8f0;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+ 
+/* ==========================================================================
+   5. GRID CHECKOUT (esquerda + direita)
+   ========================================================================== */
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 24px;
+    align-items: start;
+}
+ 
+/* ==========================================================================
+   6. CARD DO JOGO
+   ========================================================================== */
+.card-jogo {
+    background-color: #0b1a2e;
+    border: 1px solid #162f52;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+ 
+.capa-jogo {
+    width: 130px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #162f52;
+    flex-shrink: 0;
+}
+ 
+.nome-jogo {
+    font-size: 16px;
+    color: #e2e8f0;
+    margin-bottom: 4px;
+}
+ 
+.genero-jogo {
+    font-size: 12px;
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+ 
+.preco-jogo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #66c0f4;
+}
+ 
+.preco-jogo.gratis {
+    color: #48bb78;
+}
+ 
+/* ==========================================================================
+   7. FORMULÁRIO DE PAGAMENTO
+   ========================================================================== */
+.form-pagamento {
+    background-color: #0b1a2e;
+    border: 1px solid #162f52;
+    border-radius: 8px;
+    padding: 24px;
+}
+ 
+.form-titulo {
+    font-size: 12px;
+    color: #66c0f4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+ 
+/* Abas */
+.abas {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+ 
+.aba {
+    flex: 1;
+    padding: 10px;
+    background-color: #071224;
+    border: 1px solid #162f52;
+    border-radius: 6px;
+    color: #94a3b8;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+ 
+.aba:hover {
+    border-color: #224675;
+    color: #cbd5e0;
+}
+ 
+.aba.ativa {
+    background-color: #162f52;
+    border-color: #66c0f4;
+    color: #fff;
+}
+ 
+/* Campos */
+.campo {
+    margin-bottom: 16px;
+}
+ 
+.campo label {
+    display: block;
+    font-size: 11px;
+    color: #4a5568;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+ 
+.campo input,
+.campo select {
+    width: 100%;
+    background-color: #071224;
+    border: 1px solid #162f52;
+    border-radius: 6px;
+    color: #e2e8f0;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+ 
+.campo input:focus,
+.campo select:focus {
+    border-color: #66c0f4;
+}
+ 
+.campo input::placeholder {
+    color: #2d3748;
+}
+ 
+.linha-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+ 
+/* Conteúdo das abas */
+.conteudo-aba {
+    display: block;
+}
+ 
+.oculto {
+    display: none !important;
+}
+ 
+/* Pix e Boleto */
+.info-alternativa {
+    text-align: center;
+    padding: 24px 0;
+}
+ 
+.alt-icone {
+    font-size: 48px;
+    margin-bottom: 14px;
+}
+ 
+.info-alternativa p {
+    font-size: 14px;
+    color: #94a3b8;
+    line-height: 1.7;
+}
+ 
+.chave-pix {
+    background-color: #071224;
+    border: 1px solid #162f52;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 13px;
+    color: #66c0f4;
+    margin: 14px auto;
+    word-break: break-all;
+    max-width: 280px;
+}
+ 
+.obs {
+    font-size: 11px;
+    color: #2d3748;
+    margin-top: 6px;
+}
+ 
+/* ==========================================================================
+   8. RESUMO DO PEDIDO
+   ========================================================================== */
+.resumo-box {
+    background-color: #0b1a2e;
+    border: 1px solid #162f52;
+    border-radius: 8px;
+    padding: 24px;
+    position: sticky;
+    top: 24px;
+}
+ 
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+ 
+.resumo-val {
+    color: #cbd5e0;
+}
+ 
+.resumo-linha.total {
+    border-top: 1px solid #162f52;
+    padding-top: 14px;
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #e2e8f0;
+}
+ 
+.resumo-linha.total .resumo-val {
+    color: #66c0f4;
+}
+ 
+.btn-pagar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background-color: #1a56a0;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+ 
+.btn-pagar:hover {
+    background-color: #1e6bbf;
+}
+ 
+.btn-pagar:active {
+    transform: scale(0.98);
+}
+ 
+.nota-seguranca {
+    text-align: center;
+    font-size: 11px;
+    color: #2d3748;
+    margin-top: 12px;
+}
+ 
+/* =====================v=====================================================
+   9. RESPONSIVO
+   ========================================================================== */
+@media (max-width: 700px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .resumo-box {
+        position: static;
+    }
+}
