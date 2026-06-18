@@ -57,52 +57,7 @@ body {
     outline: none;
 }
  
-/* ==========================================================================
-   3. TELA DE SUCESSO
-   ========================================================================== */
-.tela-sucesso {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 70vh;
-    text-align: center;
-    padding: 40px 24px;
-}
- 
-.sucesso-icone {
-    font-size: 64px;
-    margin-bottom: 20px;
-}
- 
-.sucesso-titulo {
-    font-size: 26px;
-    color: #66c0f4;
-    margin-bottom: 10px;
-}
- 
-.sucesso-msg {
-    color: #94a3b8;
-    font-size: 15px;
-    margin-bottom: 28px;
-}
- 
-.btn-voltar {
-    display: inline-block;
-    padding: 12px 28px;
-    background-color: #0b1a2e;
-    border: 1px solid #66c0f4;
-    border-radius: 6px;
-    color: #66c0f4;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background 0.2s;
-}
- 
-.btn-voltar:hover {
-    background-color: #162f52;
-}
- 
+
 /* ==========================================================================
    4. CONTAINER E BREADCRUMB
    ========================================================================== */
@@ -143,7 +98,7 @@ body {
    ========================================================================== */
 .checkout-grid {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: 1fr 300px;
     gap: 24px;
     align-items: start;
 }
