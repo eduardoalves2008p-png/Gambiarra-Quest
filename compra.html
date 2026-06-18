@@ -25,13 +25,7 @@
         </div>
     </header>
  
-    <!-- TELA DE SUCESSO (oculta no início) -->
-    <div class="tela-sucesso" id="telaSucesso">
-        <div class="sucesso-icone">🎮</div>
-        <h2 class="sucesso-titulo">Compra concluída!</h2>
-        <p class="sucesso-msg" id="sucessoMsg">Seu jogo foi adicionado à biblioteca.</p>
-        <a href="biblioteca.html" class="btn-voltar">← Voltar para a Biblioteca</a>
-    </div>
+  
  
     <!-- ÁREA DE CHECKOUT -->
     <div class="container" id="areaCheckout">
@@ -53,7 +47,7 @@
  
                 <!-- Card do jogo -->
                 <div class="card-jogo">
-                    <img class="capa-jogo" id="capaJogo" src="" alt="Capa do jogo">
+                  
                     <div class="info-jogo">
                         <h2 class="nome-jogo" id="nomeJogo">—</h2>
                         <p class="genero-jogo" id="generoJogo">Gambiarra Quest</p>
@@ -101,25 +95,7 @@
                         </div>
                     </div>
  
-                    <!-- PIX -->
-                    <div class="conteudo-aba oculto" id="abaPix">
-                        <div class="info-alternativa">
-                            <div class="alt-icone">⚡</div>
-                            <p>Pague com Pix e receba acesso imediato.<br>Copie a chave abaixo e realize o pagamento no seu banco.</p>
-                            <div class="chave-pix">gambiarra@quest.com.br</div>
-                            <p class="obs">Chave Pix fictícia — projeto escolar</p>
-                        </div>
-                    </div>
- 
-                    <!-- BOLETO -->
-                    <div class="conteudo-aba oculto" id="abaBoleto">
-                        <div class="info-alternativa">
-                            <div class="alt-icone">🧾</div>
-                            <p>O boleto será gerado ao confirmar.<br>Prazo de vencimento: <strong>3 dias úteis</strong>.<br>O acesso ao jogo é liberado após a compensação.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                >
  
             <!-- COLUNA DIREITA: resumo -->
             <div class="resumo-box">
@@ -143,59 +119,7 @@
         </div>
     </div>
  
-    <script>
-        const params   = new URLSearchParams(window.location.search);
-        const nome     = params.get('jogo')   || 'Jogo';
-        const preco    = params.get('preco')  || '0';
-        const img      = params.get('img')    || '';
-        const genero   = params.get('genero') || 'Gambiarra Quest';
- 
-        const precoNum = parseFloat(preco.replace(',', '.'));
-        const precoFmt = precoNum === 0
-            ? 'GRÁTIS'
-            : 'R$ ' + precoNum.toFixed(2).replace('.', ',');
- 
-        document.getElementById('nomeJogo').textContent       = nome;
-        document.getElementById('breadcrumbJogo').textContent = nome;
-        document.getElementById('generoJogo').textContent     = genero;
-        document.getElementById('resumoNome').textContent     = nome;
-        document.getElementById('resumoPreco').textContent    = precoFmt;
-        document.getElementById('resumoTotal').textContent    = precoFmt;
- 
-        const precoEl = document.getElementById('precoJogo');
-        precoEl.textContent = precoFmt;
-        if (precoNum === 0) precoEl.classList.add('gratis');
- 
-        if (img) document.getElementById('capaJogo').src = decodeURIComponent(img);
- 
-        if (precoNum === 0) {
-            document.getElementById('btnPagar').textContent = 'Adicionar à biblioteca (grátis)';
-        }
- 
-        function trocarAba(aba, btn) {
-            document.querySelectorAll('.conteudo-aba').forEach(el => el.classList.add('oculto'));
-            document.querySelectorAll('.aba').forEach(el => el.classList.remove('ativa'));
-            document.getElementById('aba' + aba.charAt(0).toUpperCase() + aba.slice(1)).classList.remove('oculto');
-            btn.classList.add('ativa');
-        }
- 
-        function mascaraCartao(el) {
-            let v = el.value.replace(/\D/g, '').slice(0, 16);
-            el.value = v.replace(/(.{4})/g, '$1 ').trim();
-        }
- 
-        function mascaraData(el) {
-            let v = el.value.replace(/\D/g, '').slice(0, 4);
-            if (v.length > 2) v = v.slice(0, 2) + '/' + v.slice(2);
-            el.value = v;
-        }
- 
-        function confirmar() {
-            document.getElementById('areaCheckout').style.display = 'none';
-            const tela = document.getElementById('telaSucesso');
-            tela.style.display = 'flex';
-            document.getElementById('sucessoMsg').textContent = precoNum === 0
-                ? `"${nome}" foi adicionado à sua biblioteca gratuitamente!`
+   
                 : `"${nome}" foi comprado por ${precoFmt}. Bom jogo!`;
         }
     </script>
